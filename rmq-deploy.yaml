@@ -15,10 +15,6 @@ spec:
       containers:
       - name: vprormq
         image: rabbitmq:latest
-        resources:
-#          limits:
-#            memory: "128Mi"
-#            cpu: "500m"
         ports:
         - containerPort: 15672
           name: vpro-rmq-port

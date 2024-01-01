@@ -8,3 +8,5 @@ spec:
   ports:
   - port: 15672
     targetPort: vpro-rmq-port
+    protocol: TCP
+  type: ClusterIP
