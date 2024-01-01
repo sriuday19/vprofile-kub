@@ -24,7 +24,7 @@ spec:
           - name: MYSQl_ROOT_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: app-serets
+                name: vproapp-secret
                 key: db-pass
       nodeSelector:
         zone: us-east-1c
