@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: vprodb  
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: vprodb 
@@ -27,11 +28,11 @@ spec:
                 name: vproapp-secret
                 key: db-pass
       nodeSelector:
-        zone: us-east-1c
+        zone: us-east-1b
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
-            volumeID: vol-099f8aace61be5023 
+            volumeID: vol-029e6102108d28c12 
             fsType: ext4
 
       initContainers:
